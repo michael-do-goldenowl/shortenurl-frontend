@@ -32,7 +32,7 @@ function App() {
     try {
       setLoading(true);
 
-      const { data } = await API.post('/shorten', { url: originURL });
+      const { data } = await API.post('/shorten', { originURL });
       setShortenURL(data);
       setOldOriginURL(originURL)
       setOriginURL('');
